@@ -352,7 +352,7 @@ public class CommandBank {
     private static int viewAccount(CommandContext<CommandSourceStack> context, BankReference reference)
     {
         IBankAccount account = reference.get();
-        if(account == null)
+        if(account != null)
         {
             if(account.getMoneyStorage().isEmpty())
             {
